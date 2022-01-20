@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_17_000533) do
-
-  create_table "coins", force: :cascade do |t|
-    t.string "description"
-    t.string "acronym"
-    t.string "url_image"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+ActiveRecord::Schema.define(version: 20_220_117_000_533) do
+  create_table 'coins', force: :cascade do |t|
+    t.string('description')
+    t.string('acronym')
+    t.string('url_image')
+    t.datetime('created_at', precision: 6, null: false)
+    t.datetime('updated_at', precision: 6, null: false)
   end
-
 end
