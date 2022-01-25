@@ -45,7 +45,7 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 # gem "sassc-rails"
 
-gem 'rubocop', require: false
+gem 'rubocop'
 gem 'rubocop-ast'
 gem 'rubocop-rails', require: false
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
@@ -72,3 +72,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+#A terminal spinner for tasks that have non-deterministic time frame.
+gem "tty-spinner"
