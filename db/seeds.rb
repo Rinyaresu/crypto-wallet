@@ -17,3 +17,9 @@ Coin.create!(
   acronym: 'SHIBA',
   url_image: 'https://s2.coinmarketcap.com/static/img/coins/200x200/5994.png'
 )
+
+Coin.create!(
+  description: 'Ethereum',
+  acronym: 'ETH',
+  url_image: 'https://d33wubrfki0l68.cloudfront.net/fcd4ecd90386aeb50a235ddc4f0063cfbb8a7b66/4295e/static/bfc04ac72981166c740b189463e1f74c/40129/eth-diamond-black-white.jpg'
+)
