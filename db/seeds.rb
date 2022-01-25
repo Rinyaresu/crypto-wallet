@@ -6,25 +6,4 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-
-coins = [
-          {
-            description: 'Bitcoin',
-            acronym: 'BTC',
-            url_image: 'https://assets.chinatechnews.com/wp-content/uploads/bitcoin-logo.jpg'
-          },
-          {
-            description: 'Ethereum',
-            acronym: 'ETH',
-            url_image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCRfwkqpPvFb3QmmwGONG2i6PsgnqZ3L7dRzCNlaSTB1-ruu5'
-          },
-          {
-            description: 'Shiba Inu Coin',
-            acronym: 'SHIBA',
-            url_image: 'https://s2.coinmarketcap.com/static/img/coins/200x200/5994.png'
-          }
-        ]
-
-coins.each do |coin|
-  Coin.find_or_create_by!(coin)
-end
+# Use /lib/tasks/dev.rake
