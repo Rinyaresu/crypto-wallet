@@ -5,8 +5,8 @@ namespace :dev do
       show_spinner("Deleting BD...") { %x(rails db:drop) }
       show_spinner("Creating BD...") { %x(rails db:create) }
       show_spinner("Migrating BD...") { %x(rails db:migrate) }
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
     else
       puts %x'You are not in development environment'
     end
@@ -19,17 +19,20 @@ namespace :dev do
                 {
                   description: 'Bitcoin',
                   acronym: 'BTC',
-                  url_image: 'https://assets.chinatechnews.com/wp-content/uploads/bitcoin-logo.jpg'
+                  url_image: 'https://assets.chinatechnews.com/wp-content/uploads/bitcoin-logo.jpg',
+                  mining_type: MiningType.find_by(acronym: 'PoW')
                 },
                 {
                   description: 'Ethereum',
                   acronym: 'ETH',
-                  url_image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCRfwkqpPvFb3QmmwGONG2i6PsgnqZ3L7dRzCNlaSTB1-ruu5'
+                  url_image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZCRfwkqpPvFb3QmmwGONG2i6PsgnqZ3L7dRzCNlaSTB1-ruu5',
+                  mining_type: MiningType.all.sample
                 },
                 {
                   description: 'Shiba Inu Coin',
                   acronym: 'SHIBA',
-                  url_image: 'https://s2.coinmarketcap.com/static/img/coins/200x200/5994.png'
+                  url_image: 'https://s2.coinmarketcap.com/static/img/coins/200x200/5994.png',
+                  mining_type: MiningType.all.sample
                 }
               ]
 
